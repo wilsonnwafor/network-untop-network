@@ -1,0 +1,33 @@
+.nav{
+    background-color: rgba(198, 219, 219, 0.694);
+    width: 100%;
+    padding-bottom: 1vh;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+
+.nav-logo{
+    height: 8vb;
+}
+
+.nav-list{
+    display: flex;
+    gap: 10%;
+    align-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-list li{
+    font-size: 20px;
+    transition: 1000ms;
+}
+
+.nav-list li:hover{
+    border-bottom: 2px solid;
+}
