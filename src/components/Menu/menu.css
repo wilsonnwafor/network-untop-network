@@ -1,0 +1,95 @@
+
+/* navigations */
+
+
+.navigation{
+    width:30%; 
+    height: 90dvh;
+    border-radius: 20px;
+    background-color: var(--primary);
+  border: 2px solid var(--secondary);
+  /* flex: 1; */
+}
+
+  .dash-menu {
+    width: 20%;
+    padding: 2rem 1rem;
+  }
+  
+  .dash-list li{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-top: 20%;
+    color: #000;
+    font-weight: 600;
+    margin-top: 50%;
+  }
+  
+  .assets-overview {
+    background-color: var(--secondary);
+    padding: 1%;
+    border-radius: 10px;
+    padding-left: 5%;
+    align-content: center;
+    height: 25vh; width: 80%;
+    margin: auto;
+  }
+
+  .assets-overview header{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .asset-header{
+    display: flex;
+    gap: 3%;
+  }
+
+  .eye-icon{
+    margin-top: 1%;
+  }
+
+  .assets-overview div{
+    width: 90%;
+    margin-bottom:  5%;
+  }
+
+  .assets-overview p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .assets-overview samp{
+    font-weight: 700;
+    color: var(--abBlack);
+  }
+
+  .asset-total, .asset-amount{
+font-size: 25px;
+  }
+
+.stake-total, .stake-amount{
+  font-size: 20px;
+}
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10%;
+  }
+  
+  .social-link  {
+display: flex;
+justify-content: center;
+gap: 3%;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text);
+  }

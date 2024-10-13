@@ -1,3 +1,6 @@
+body{
+    font-family: var(--myFont);
+}
 .nav{
     background-color: rgba(198, 219, 219, 0.694);
     width: 100%;
@@ -17,17 +20,17 @@
 
 .nav-list{
     display: flex;
-    gap: 10%;
+    gap: 5%;
     align-content: center;
     align-items: center;
     list-style: none;
 }
 
-.nav-list li{
+.nav-list button{
+    width: 20vw;
+    padding: 1%;
+    border: 1px solid #4a55577d;
+    border-radius: 20px;
     font-size: 20px;
-    transition: 1000ms;
-}
-
-.nav-list li:hover{
-    border-bottom: 2px solid;
+    font-weight: 500;
 }

@@ -4,12 +4,31 @@ import "./login.css";
 import "../general.css";
 import Nav from "../Nav";
 import Reg from "./reg";
+import Dashboard from "../dashboard/Dashboard";
 
 export default function Login() {
-    const[log_inp, setLogInp ]= useState({
-        phone:"",
-        pin:""
-    })
+  const [log_inp, setLogInp] = useState({
+    phone: "",
+    pin: "",
+  });
+
+  let numb = 12345;
+  let mypin = 123;
+
+  function AuthCheck(e) {
+    e.preventDefault();
+    if (log_inp.phone == numb && log_inp.pin == mypin) {
+      return( <Dashboard />),
+      console.log("worked!")
+    } else {
+      return(<Reg/>) 
+    }
+ 
+    
+  }
+
+
+  
   return (
     <>
       <main className="login-main">
@@ -17,25 +36,44 @@ export default function Login() {
         <div className="login-flex">
           <form className="login-form">
             <div className="form-block">
-                {/* <h2>{log_inp.phone} {log_inp.pin}</h2> */}
+              {/* <h2>{log_inp.phone} {log_inp.pin}</h2> */}
               <div>
                 <label htmlFor="numb-inp">Phone</label>
-                <input type="number" id="numb-inp" onChange={(e)=> setLogInp({ ...log_inp,phone: e.target.value })}/>
+                <input
+                  type="number"
+                  id="numb-inp"
+                  onChange={(e) =>
+                    setLogInp({ ...log_inp, phone: e.target.value })
+                  }
+                />
               </div>
 
               <div>
                 <label htmlFor="pin-inp">Pin</label>
-                <input type="number" id="pin-inp" onChange={(e)=> setLogInp({...log_inp, pin: e.target.value})} />
+                <input
+                  type="number"
+                  id="pin-inp"
+                  onChange={(e) =>
+                    setLogInp({ ...log_inp, pin: e.target.value })
+                  }
+                />
               </div>
               <p className="forget-p">FORGOT PASSWORD</p>
-              <button className="login-btn">LOGIN</button>
+              <button onClick={(e) => AuthCheck(e)} className="login-btn">
+                LOGIN
+              </button>
 
               <span className="or">or</span>
 
               <p className="other-opt">
                 <button>Google</button>
                 <button>Wallet Connect</button>
-               <button><Link className="link" to="/Reg"> Sign Up</Link> </button>   
+                <button>
+                  <Link className="link" to="/Reg">
+                    {" "}
+                    Sign Up
+                  </Link>{" "}
+                </button>
               </p>
             </div>
           </form>

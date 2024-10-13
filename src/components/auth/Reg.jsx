@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./reg.css";
 import "../general.css";
 import Nav from "../Nav";
-import Login from "./login";
+import Login from "./Login";
 
 
 export default function Reg() {

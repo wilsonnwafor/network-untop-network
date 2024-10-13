@@ -15,88 +15,14 @@ import {
   FaWallet,
 } from "react-icons/fa"; // Font Awesome icon
 import { FaGear, FaGears } from "react-icons/fa6";
+import Menu from "../Menu/Menu";
 
 export default function Dashboard() {
   return (
     <main className="dash-main">
       <Nav />
       <div className="dash-flex">
-        {/* Sidebar Navigation */}
-        <section className="navigation">
-          <menu className="dash-menu">
-            <ul className="dash-list">
-              <li>
-                <i>
-                  <FaHome />
-                </i>
-                Home
-              </li>
-              <li>
-                <i>
-                  <FaWallet />
-                </i>{" "}
-                Assets
-              </li>
-              <li>
-                <i className="icon-account">
-                  <FaUser />
-                </i>{" "}
-                Profile
-              </li>
-              <li>
-                <i className="icon-settings">
-                  <FaGears />
-                </i>{" "}
-                Settings
-              </li>
-            </ul>
-          </menu>
-          <div className="assets-overview">
-            <div>
-              <header className="asset-header">
-                Assets Overview{" "}
-                <i className="eye-icon">
-                  <FaEyeSlash />
-                </i>{" "}
-              </header>
-              <p>
-                <samp className="asset-total">TOTAL:</samp>{" "}
-                <samp className="asset-amount">10,000</samp>
-              </p>
-            </div>
-
-            <div>
-              <header className="stake-header">Stake Overview</header>
-              <p>
-                <samp className="stake-total">TOTAL:</samp>{" "}
-                <samp className="stake-amount">10,000</samp>
-              </p>
-            </div>
-          </div>
-          <div className="social-links">
-            <a href="#">
-              <i className="icon-twitter"></i>
-            </a>
-            <a href="#">
-              <i className="icon-discord"></i>
-            </a>
-          </div>
-          {/* <p className="copyright">© 2024 NUN NUN</p> */}
-          <div className="social-link">
-            <i>
-              <FaFacebook />
-            </i>{" "}
-            <i>
-              <FaInstagram />
-            </i>{" "}
-            <i>
-              <FaTwitter />
-            </i>{" "}
-            <i>
-              <FaDiscord />
-            </i>
-          </div>
-        </section>
+<Menu/>
 
         {/* Deposit, Withdraw, and Swap Sections */}
         <main className="transaction">
