@@ -25,8 +25,8 @@ export default function Deposit() {
               <div>Amount</div> <input type="number" />
             </div>
             <p className="convert-usdt">
-                <header>USDT</header>
-                <span>1.00</span>
+              <header>USDT</header>
+              <span>1.00</span>
             </p>
             <div className="action-block">
               <button>Cancel</button>

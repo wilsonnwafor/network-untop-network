@@ -12,11 +12,12 @@
   }
   
   .reg-form {
-    background-color: var(--lit-bg);
+    background-color: var(--tra-bg);
     height: 80vh;
     width: 40%;
     align-content: center;
     border-radius: 20px;
+    border: 2px solid var(--text);
   }
   
   .reg-form .form-block {
@@ -41,7 +42,7 @@
   
   .reg-form div input {
     background-color: transparent;
-    border: 3px solid var(--lit-bg);
+    border: 2px solid #e4e5f23d;
     outline: none;
     border-radius: 10px;
     width: 100%;
@@ -52,6 +53,10 @@
   
   .reg-form div input:focus {
     border: 3px solid var(--text);
+  }
+
+  .input-p1 div {
+    width: 100%;
   }
   
   .form-logo {
@@ -84,7 +89,7 @@
   }
   
   .login-btn:hover {
-    background-color: var(--lit-bg);
+    background-color: #ffffff28;
   }
   
   .or {
@@ -120,7 +125,7 @@ color: black;
   }
   
   .other-opt button:hover {
-    background-color: var(--lit-bg);
+    background-color: #ffffff28;
   } 
   
   @media (max-width:760px) {

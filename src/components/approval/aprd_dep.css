@@ -1,0 +1,53 @@
+body {
+  /* background-color: white; */
+  align-content: center;
+}
+
+.approve-main {
+  display: flex;
+  align-content: center;
+}
+
+.approve-block {
+  background-color: #5c6876a5;
+  width: 80%;
+  height: 80vh;
+  border-radius: 30px;
+  margin: auto;
+  align-content: center;
+  margin-top: 5%;
+  border: 3px solid #cdcdcda5;
+}
+
+.approve-form {
+  width: 90%;
+  height: 70vh;
+  margin: auto;
+}
+
+.success {
+  font-size: 100px;
+}
+
+.suc-block {
+  display: flex;
+  gap: 3%;
+  margin-top: 5%;
+}
+
+.suc-msg {
+  color: white;
+  font-weight: 500;
+}
+
+.bill-icon {
+  font-size: 45px;
+}
+
+.check-icon {
+  font-size: 180px;
+  display: block;
+  text-align: center;
+  margin-top: 8%;
+  margin-left: auto;
+}

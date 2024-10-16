@@ -65,11 +65,14 @@ export default function Reg() {
             </div>
           </form>
 
-          <img
+          <div className="logo-block">
+         <img
             className="form-logo"
             src="src/assets/imgs/nun-logo2.png"
             alt=""
           />
+          <p className="logo-text">SIMPLE FAST AND SAFE STAKING</p>
+</div>
         </div>
       </main>
     </>

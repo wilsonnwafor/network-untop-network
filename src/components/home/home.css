@@ -1,0 +1,44 @@
+body{
+    background-image: url(src/assets/imgs/sign-bg.png);
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+}
+.home-main{
+    display: flex;
+    gap: 3%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.home-logo{
+    height: 40vh;
+}
+
+.logo-text{
+        color: white;
+}
+
+.action-btn{
+
+    align-content: center;
+    text-align: center;
+}
+
+.home-btn button{
+    margin: auto;
+    margin: 5% 2%;
+    /* display: block; */
+    width: 35%;
+    padding: 2%;
+    border-radius: 10px;
+    outline: none;
+    background-color: #ffffff3f;
+    border: none;
+    /* box-shadow: 0 0 3px 0; */
+    justify-content: center;
+    font-weight: 500;
+    transition: 500ms;
+}
+
+

@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import Landing from './components/landing page/Landing'
-import Login from './components/auth/Login'
-import Reg from './components/auth/reg'
-import Dashboard from './components/dashboard/Dashboard'
-import { Route, Routes } from 'react-router-dom'
-import Deposit from './components/Deposit/Deposit'
-import Withdraw from './components/withdraw/withdraw'
+import { useState } from "react";
+import Landing from "./components/landing page/Landing";
+import Login from "./components/auth/Login";
+import Reg from "./components/auth/reg";
+import Dashboard from "./components/dashboard/Dashboard";
+import { Route, Routes } from "react-router-dom";
+import Deposit from "./components/Deposit/Deposit";
+import Withdraw from "./components/withdraw/withdraw";
+import Approved_deposit from "./components/approval/approved_deposit";
+import Home from "./components/home/Home";
 
 function App() {
-
-
   return (
     <>
-{/* <Dashboard/> */}
-{/* <Deposit/> */}
-{/* <Withdraw/> */}
+      {/* <Dashboard/> */}
+      {/* <Deposit/> */}
+      {/* <Approved_deposit/> */}
+      {/* <Withdraw/> */}
+      {/* <Home/> */}
 
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/Reg" element={<Reg />} />
+        <Route path="/Home" element={<Home />} />
+        {/* <Route path='/Dashboard' element={<Dashboard/>}/> */}
+      </Routes>
 
- <Routes>
-
-    <Route path="/" element={< Landing/>}/> 
-   <Route path="/login" element={<Login />} />
-   <Route path="/Reg" element={<Reg />} />
- <Route path="/Landing" element={<Landing />} />
-
- </Routes>
-
- {/* <Reg/> */}
- {/* <Stake_form/> */}
+      {/* <Reg/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

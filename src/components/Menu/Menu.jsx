@@ -13,7 +13,9 @@ import {
     FaWallet,
   } from "react-icons/fa"; // Font Awesome icon
 import { FaGear } from "react-icons/fa6";
-
+import { Link } from "react-router-dom";
+import Home from "../home/Home";
+import Dashboard from "../dashboard/Dashboard";
 
 export default function Menu() {
   return (
@@ -22,18 +24,18 @@ export default function Menu() {
       <section className="navigation">
         <menu className="dash-menu">
             <ul className="dash-list">
-                <li>
+                <Link to="/Home">
                 <i>
                     <FaHome />
                 </i>
                 Home
-                </li>
-                <li>
+                </Link>
+                <Link to="src/dashboard/Dashboard">
                 <i>
                     <FaWallet />
                 </i>{" "}
                 Assets
-                </li>
+                </Link>
                 <li>
                 <i className="icon-account">
                     <FaUser />

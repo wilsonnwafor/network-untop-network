@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import "../general.css";
 import Nav from "../Nav";
@@ -7,10 +7,15 @@ import Reg from "./reg";
 import Dashboard from "../dashboard/Dashboard";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const [error, setError] = useState(false);
+  const[invalid, setInvalid] = useState('')
   const [log_inp, setLogInp] = useState({
     phone: "",
     pin: "",
   });
+
+
 
   let numb = 12345;
   let mypin = 123;
@@ -18,24 +23,28 @@ export default function Login() {
   function AuthCheck(e) {
     e.preventDefault();
     if (log_inp.phone == numb && log_inp.pin == mypin) {
-      return( <Dashboard />),
-      console.log("worked!")
-    } else {
-      return(<Reg/>) 
+      navigate("/dashboard");
+
+    
+    } else if (log_inp.phone == ""  && log_inp.pin == "") {
+      setInvalid('Please fill all inputs')
+      }  else if (log_inp.phone != numb && log_inp.pin != mypin) {
+      setInvalid('Please enter a valid email')
     }
- 
+  }
+  function handleChange(e){
     
   }
 
-
-  
   return (
     <>
       <main className="login-main">
         {/* <Nav /> */}
         <div className="login-flex">
-          <form className="login-form">
+          <form className="login-form" >
             <div className="form-block">
+              {/* {error ? <p className="text-red">Please fill all inputs</p>: ''} */}
+              {invalid ? <p className="text-red">{invalid}</p>: ''}
               {/* <h2>{log_inp.phone} {log_inp.pin}</h2> */}
               <div>
                 <label htmlFor="numb-inp">Phone</label>
@@ -43,7 +52,7 @@ export default function Login() {
                   type="number"
                   id="numb-inp"
                   onChange={(e) =>
-                    setLogInp({ ...log_inp, phone: e.target.value })
+                    setLogInp({ ...log_inp, phone: e.target.value }) 
                   }
                 />
               </div>
@@ -77,12 +86,14 @@ export default function Login() {
               </p>
             </div>
           </form>
-
-          <img
-            className="form-logo"
-            src="src/assets/imgs/nun-logo2.png"
-            alt=""
-          />
+          <div className="logo-block">
+            <img
+              className="form-logo"
+              src="src/assets/imgs/nun-logo2.png"
+              alt=""
+            />
+            <p className="logo-text">SIMPLE FAST AND SAFE STAKING</p>
+          </div>
         </div>
       </main>
     </>

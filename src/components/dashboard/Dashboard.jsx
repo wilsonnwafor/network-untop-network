@@ -22,7 +22,7 @@ export default function Dashboard() {
     <main className="dash-main">
       <Nav />
       <div className="dash-flex">
-<Menu/>
+        <Menu />
 
         {/* Deposit, Withdraw, and Swap Sections */}
         <main className="transaction">
@@ -84,13 +84,8 @@ export default function Dashboard() {
                   <button className="unstake-btn">Unstake</button>
                 </p>
               </div>
-              
             </div>
-
-
           </menu>
-
-
         </main>
 
         {/* Goals Section */}
