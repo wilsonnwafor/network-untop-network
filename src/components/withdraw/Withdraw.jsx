@@ -3,12 +3,12 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import "./withdraw.css";
 import Menu from "../Menu/Menu";
 import { FaWallet } from "react-icons/fa";
-import Nav from "../Nav";
+import Nav from "../nav/Nav";
 
 export default function Withdraw() {
   return (
     <>
-    <Nav/>
+      <Nav />
       <main className="withdraw-main">
         <Menu />
         <section className="withdraw-sector">
@@ -38,8 +38,8 @@ export default function Withdraw() {
               <div>Amount</div> <input type="number" />
             </div>
             <p className="convert-usdt">
-                <header>USDT</header>
-                <span>1.00</span>
+              <header>USDT</header>
+              <span>1.00</span>
             </p>
             <div className="action-block">
               <button>Cancel</button>

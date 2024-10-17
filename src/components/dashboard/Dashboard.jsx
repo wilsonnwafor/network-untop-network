@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../Nav";
+import Nav from "../nav/Nav";
 import "./dashboard.css";
 import "../general.css";
 import {

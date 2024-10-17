@@ -9,22 +9,26 @@ import Withdraw from "./components/withdraw/withdraw";
 import Approved_deposit from "./components/approval/approved_deposit";
 import Home from "./components/home/Home";
 
+
+
+
+
 function App() {
   return (
     <>
+
       {/* <Dashboard/> */}
-      {/* <Deposit/> */}
+      <Deposit/>
       {/* <Approved_deposit/> */}
       {/* <Withdraw/> */}
       {/* <Home/> */}
-
+{/* 
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Reg" element={<Reg />} />
         <Route path="/Home" element={<Home />} />
-        {/* <Route path='/Dashboard' element={<Dashboard/>}/> */}
-      </Routes>
+      </Routes> */}
 
       {/* <Reg/> */}
     </>

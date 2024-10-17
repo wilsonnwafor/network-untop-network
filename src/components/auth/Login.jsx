@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import "../general.css";
-import Nav from "../Nav";
+import Nav from "../nav/Nav";
 import Reg from "./reg";
 import Dashboard from "../dashboard/Dashboard";
 
 export default function Login() {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
-  const[invalid, setInvalid] = useState('')
+  const [invalid, setInvalid] = useState("");
   const [log_inp, setLogInp] = useState({
     phone: "",
     pin: "",
   });
-
-
 
   let numb = 12345;
   let mypin = 123;
@@ -24,27 +22,23 @@ export default function Login() {
     e.preventDefault();
     if (log_inp.phone == numb && log_inp.pin == mypin) {
       navigate("/dashboard");
-
-    
-    } else if (log_inp.phone == ""  && log_inp.pin == "") {
-      setInvalid('Please fill all inputs')
-      }  else if (log_inp.phone != numb && log_inp.pin != mypin) {
-      setInvalid('Please enter a valid email')
+    } else if (log_inp.phone == "" && log_inp.pin == "") {
+      setInvalid("Please fill all inputs");
+    } else if (log_inp.phone != numb && log_inp.pin != mypin) {
+      setInvalid("Please enter a valid email");
     }
   }
-  function handleChange(e){
-    
-  }
+  function handleChange(e) {}
 
   return (
     <>
       <main className="login-main">
         {/* <Nav /> */}
         <div className="login-flex">
-          <form className="login-form" >
+          <form className="login-form">
             <div className="form-block">
               {/* {error ? <p className="text-red">Please fill all inputs</p>: ''} */}
-              {invalid ? <p className="text-red">{invalid}</p>: ''}
+              {invalid ? <p className="text-red">{invalid}</p> : ""}
               {/* <h2>{log_inp.phone} {log_inp.pin}</h2> */}
               <div>
                 <label htmlFor="numb-inp">Phone</label>
@@ -52,7 +46,7 @@ export default function Login() {
                   type="number"
                   id="numb-inp"
                   onChange={(e) =>
-                    setLogInp({ ...log_inp, phone: e.target.value }) 
+                    setLogInp({ ...log_inp, phone: e.target.value })
                   }
                 />
               </div>

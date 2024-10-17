@@ -3,9 +3,46 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import "./deposit.css";
 import Menu from "../Menu/Menu";
 
+import { useCallback } from "react";
+import { Avatar, Name } from "@coinbase/onchainkit/identity";
+import {
+  Transaction,
+  TransactionButton,
+  TransactionSponsor,
+  TransactionStatus,
+  TransactionStatusAction,
+  TransactionStatusLabel,
+} from "@coinbase/onchainkit/transaction";
+import { useAccount } from "wagmi";
+import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
+import { contracts } from "./contracts";
+
 export default function Deposit() {
+  const { address } = useAccount(); // Assuming 'address' is part of the account data
+
   return (
     <>
+      address ? (
+      <Transaction
+        chainId={11155111}
+        contracts={contracts}
+        onStatus={'success'}
+      >
+        <TransactionButton />
+        <TransactionSponsor />
+        <TransactionStatus>
+          <TransactionStatusLabel />
+          <TransactionStatusAction />
+        </TransactionStatus>
+      </Transaction>
+      ) : (
+      <Wallet>
+        <ConnectWallet>
+          <Avatar className="h-6 w-6" />
+          <Name />
+        </ConnectWallet>
+      </Wallet>
+      ) );
       <main className="deposit-main">
         <Menu />
         <section className="deposit-sector">

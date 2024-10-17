@@ -34,3 +34,39 @@ body {
   font-size: 20px;
   font-weight: 500;
 }
+
+.connect-wallet{
+  height: 5vh; width: 20%;
+}
+
+.walletD{
+  background-color: #fff;
+}
+
+.nav-icon{
+  font-size: 70px;
+
+}
+
+.wallet-id{
+  background-color: transparent;
+  height: 5vh; width: 50%;
+  font-size: 12px;
+  accent-color: red;
+  appearance: none;
+}
+
+.wallet-id .name {
+  font-size: 15px;
+}
+
+.wallet-id .name .badge{
+  height: 1vh; width: 2%;
+  font-size: 12px;
+}
+
+.wallet-id .address{
+  font-size: 15px;
+}
+
+
