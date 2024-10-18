@@ -1,56 +1,68 @@
 import React from "react";
 import "./menu.css";
+import "../general.css";
 import {
-    FaAward,
-    FaBeer,
-    FaDiscord,
-    FaEyeSlash,
-    FaFacebook,
-    FaHome,
-    FaInstagram,
-    FaTwitter,
-    FaUser,
-    FaWallet,
-  } from "react-icons/fa"; // Font Awesome icon
+  FaAward,
+  FaBeer,
+  FaDiscord,
+  FaEyeSlash,
+  FaFacebook,
+  FaHome,
+  FaInstagram,
+  FaTwitter,
+  FaUser,
+  FaWallet,
+} from "react-icons/fa"; // Font Awesome icon
 import { FaGear } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Home from "../home/Home";
-import Dashboard from "../dashboard/Dashboard";
+
+import "@coinbase/onchainkit/styles.css";
+import {
+  Avatar,
+  Identity,
+  Name,
+  Badge,
+  Address,
+} from "@coinbase/onchainkit/identity";
 
 export default function Menu() {
   return (
     <>
       {/* Sidebar Navigation */}
       <section className="navigation">
+        <Identity
+          className="menu-wallet-id bg-blue "
+          address="0x1AB850C0FFA3fe879B501fca9127f29d03464F46"
+          schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
+        >
+          <Avatar className="menu-avatar bg-blue-80 text-center" />
+          <Address className="menu-address bg-blue-80 text-center flex" />
+          <Badge className="badge  w-4 " />
+        </Identity>
+
         <menu className="dash-menu">
-            <ul className="dash-list">
-                <Link to="/Home">
-                <i>
-                    <FaHome />
-                </i>
+          <ul className="dash-list">
+            <li>
+              <Link to="/Home">
                 Home
-                </Link>
-                <Link to="src/dashboard/Dashboard">
-                <i>
-                    <FaWallet />
-                </i>{" "}
+              </Link>
+            </li>
+
+            <li>
+              <Link to='/assets'>
                 Assets
-                </Link>
-                <li>
-                <i className="icon-account">
-                    <FaUser />
-                </i>{" "}
-                Profile
-                </li>
-                <li>
-                <i className="icon-settings">
-                    <FaGear />
-                </i>{" "}
-                Settings
-                </li>
-            </ul>
-            </menu>
-         <div className="assets-overview">
+              </Link>
+            </li>
+            <li>
+              Profile
+            </li>
+            <li>
+              Settings
+            </li>
+          </ul>
+        </menu>
+        <div className="assets-overview">
           <div>
             <header className="asset-header">
               Assets Overview{" "}
@@ -71,7 +83,7 @@ export default function Menu() {
               <samp className="stake-amount">10,000</samp>
             </p>
           </div>
-        </div> 
+        </div>
         <div className="social-links">
           <a href="#">
             <i className="icon-twitter"></i>
@@ -94,7 +106,7 @@ export default function Menu() {
           <i>
             <FaDiscord />
           </i>
-        </div> 
+        </div>
       </section>
     </>
   );

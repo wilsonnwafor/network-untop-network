@@ -57,13 +57,11 @@ export default function Nav() {
           <FaSearch className="nav-icon"/>
           <FaQuestionCircle className="nav-icon"/>
           <FaBell className="nav-icon"/>
-
-
           <Identity className="wallet-id bg-blue-800"
             address="0x1AB850C0FFA3fe879B501fca9127f29d03464F46"
             schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
           >
-            <Avatar className="avatar" />
+              <Avatar className="avatar bg-blue-80 m-5" />
               <Badge className="badge bg-blue-80 w-4"/>
           </Identity>
 

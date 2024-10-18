@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../nav/Nav";
-import "./dashboard.css";
+import "./asset.css";
 import "../general.css";
 import {
   FaAward,
@@ -17,7 +17,7 @@ import {
 import { FaGear, FaGears } from "react-icons/fa6";
 import Menu from "../Menu/Menu";
 
-export default function Dashboard() {
+export default function Asset() {
   return (
     <main className="dash-main">
       <Nav />

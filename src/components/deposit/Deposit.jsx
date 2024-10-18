@@ -3,26 +3,32 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import "./deposit.css";
 import Menu from "../Menu/Menu";
 
-import { useCallback } from "react";
-import { Avatar, Name } from "@coinbase/onchainkit/identity";
-import {
-  Transaction,
-  TransactionButton,
-  TransactionSponsor,
-  TransactionStatus,
-  TransactionStatusAction,
-  TransactionStatusLabel,
-} from "@coinbase/onchainkit/transaction";
-import { useAccount } from "wagmi";
-import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
-import { contracts } from "./contracts";
+// import { useCallback } from "react";
+// import { Avatar, Name } from "@coinbase/onchainkit/identity";
+// import {
+//   Transaction,
+//   TransactionButton,
+//   TransactionSponsor,
+//   TransactionStatus,
+//   TransactionStatusAction,
+//   TransactionStatusLabel,
+// } from "@coinbase/onchainkit/transaction";
+// import { useAccount } from "wagmi";
+// import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
+// import { contracts } from "./contracts";
 
 export default function Deposit() {
-  const { address } = useAccount(); // Assuming 'address' is part of the account data
+//   const { address } = useAccount(); // Assuming 'address' is part of the account data
+
+// async function converter() {
+//     let url = await fetch("contract.js")
+//     let data = await url.json()
+//     console.log(data)
+// }
 
   return (
     <>
-      address ? (
+      {/* address ? (
       <Transaction
         chainId={11155111}
         contracts={contracts}
@@ -41,8 +47,11 @@ export default function Deposit() {
           <Avatar className="h-6 w-6" />
           <Name />
         </ConnectWallet>
-      </Wallet>
-      ) );
+      </Wallet> */}
+
+      {/* ) ); */}
+
+
       <main className="deposit-main">
         <Menu />
         <section className="deposit-sector">
@@ -67,7 +76,7 @@ export default function Deposit() {
             </p>
             <div className="action-block">
               <button>Cancel</button>
-              <button>Pay</button>
+              <button>Deposit</button>
             </div>
           </form>
         </section>

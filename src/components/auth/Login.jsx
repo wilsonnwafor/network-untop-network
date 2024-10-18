@@ -4,11 +4,12 @@ import "./login.css";
 import "../general.css";
 import Nav from "../nav/Nav";
 import Reg from "./reg";
-import Dashboard from "../dashboard/Dashboard";
+import Asset from "../asset-comp/Asset";
+import Home from "../home/Home";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [invalid, setInvalid] = useState("");
   const [log_inp, setLogInp] = useState({
     phone: "",
@@ -21,11 +22,11 @@ export default function Login() {
   function AuthCheck(e) {
     e.preventDefault();
     if (log_inp.phone == numb && log_inp.pin == mypin) {
-      navigate("/dashboard");
+      navigate("/home");
     } else if (log_inp.phone == "" && log_inp.pin == "") {
       setInvalid("Please fill all inputs");
     } else if (log_inp.phone != numb && log_inp.pin != mypin) {
-      setInvalid("Please enter a valid email");
+      setInvalid("Please enter a valid number or pin");
     }
   }
   function handleChange(e) {}
@@ -37,8 +38,7 @@ export default function Login() {
         <div className="login-flex">
           <form className="login-form">
             <div className="form-block">
-              {/* {error ? <p className="text-red">Please fill all inputs</p>: ''} */}
-              {invalid ? <p className="text-red">{invalid}</p> : ""}
+              {invalid ? <p className="err-text">{invalid}</p> : ""}
               {/* <h2>{log_inp.phone} {log_inp.pin}</h2> */}
               <div>
                 <label htmlFor="numb-inp">Phone</label>
