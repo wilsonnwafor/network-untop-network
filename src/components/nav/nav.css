@@ -37,6 +37,11 @@ body {
 
 .connect-wallet{
   height: 5vh; width: 20%;
+  transition: 500ms;
+}
+
+.connect-wallet:hover{
+  background-color: var(--tra-bg);
 }
 
 .walletD{

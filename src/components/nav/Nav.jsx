@@ -33,7 +33,7 @@ export default function Nav() {
  
 
           <Wallet className="wallet-block bg-blue-800 ">
-            <ConnectWallet className="connect-wallet bg-blue-800 w-5">
+            <ConnectWallet className="connect-wallet bg-blue-800 w-5 hover:bg-red">
               <Avatar className="h-6 w-6" />
               <Name />
             </ConnectWallet>

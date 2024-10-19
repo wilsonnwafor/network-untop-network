@@ -20,7 +20,7 @@ function App() {
     {/* all components */}
 
       {/* <Asset/> */}
-      {/* <Deposit/> */}
+      <Deposit/>
       {/* <Approved_deposit/> */}
       {/* <Withdraw/> */}
       {/* <Home/> */}
