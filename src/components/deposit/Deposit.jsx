@@ -15,14 +15,14 @@ import {
 } from "@coinbase/onchainkit/transaction";
 import { useAccount } from "wagmi";
 import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
-import { contracts } from "./contracts";
+// import { contracts } from "./contracts";
 
 export default function Deposit() {
   const { address } = useAccount(); // Assuming 'address' is part of the account data
 
   return (
     <>
-      address ? (
+      { address ? (
       <Transaction
         chainId={11155111}
         contracts={contracts}
@@ -42,7 +42,7 @@ export default function Deposit() {
           <Name />
         </ConnectWallet>
       </Wallet>
-      ) );
+      ) }
       <main className="deposit-main">
         <Menu />
         <section className="deposit-sector">

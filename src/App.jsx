@@ -18,17 +18,20 @@ function App() {
     <>
 
       {/* <Dashboard/> */}
-      <Deposit/>
+      {/* <Deposit/> */}
       {/* <Approved_deposit/> */}
       {/* <Withdraw/> */}
       {/* <Home/> */}
-{/* 
+
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Reg" element={<Reg />} />
         <Route path="/Home" element={<Home />} />
-      </Routes> */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/withdraw" element={<Withdraw />} />
+        <Route path="/deposit" element={<Deposit />} />
+      </Routes>
 
       {/* <Reg/> */}
     </>

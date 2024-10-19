@@ -24,13 +24,13 @@ export default function Menu() {
       <section className="navigation">
         <menu className="dash-menu">
             <ul className="dash-list">
-                <Link to="/Home">
+                <Link to="/home">
                 <i>
                     <FaHome />
                 </i>
                 Home
                 </Link>
-                <Link to="src/dashboard/Dashboard">
+                <Link to="/dashboard">
                 <i>
                     <FaWallet />
                 </i>{" "}

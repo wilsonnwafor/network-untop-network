@@ -21,7 +21,7 @@ export default function Login() {
   function AuthCheck(e) {
     e.preventDefault();
     if (log_inp.phone == numb && log_inp.pin == mypin) {
-      navigate("/dashboard");
+      navigate("/home");
     } else if (log_inp.phone == "" && log_inp.pin == "") {
       setInvalid("Please fill all inputs");
     } else if (log_inp.phone != numb && log_inp.pin != mypin) {
