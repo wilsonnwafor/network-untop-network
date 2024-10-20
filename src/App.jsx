@@ -20,7 +20,7 @@ function App() {
     {/* all components */}
 
       {/* <Asset/> */}
-      <Deposit/>
+      {/* <Deposit/> */}
       {/* <Approved_deposit/> */}
       {/* <Withdraw/> */}
       {/* <Home/> */}
@@ -30,6 +30,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Reg" element={<Reg />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Asset" element={<Asset />} />
+        <Route path="/Deposit" element={<Deposit />} />
+        <Route path="/Withdraw" element={<Withdraw />} />
       </Routes>
 
       {/* <Reg/> */}

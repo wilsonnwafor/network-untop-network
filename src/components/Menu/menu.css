@@ -46,16 +46,17 @@
     color: #000;
     font-weight: 600;
     margin-top: 10%;
-    background-color: #ffffff39;
+    
+    /* background-color: #ffffff39;
     padding-left: 50%;
     width: 25vw; height: 5vh;
-    border-radius: 10px;
+    border-radius: 10px;*/
     transition: 300ms;
-    cursor: pointer;
+    cursor: pointer; 
   }
 
   .dash-list li:hover{
-    background-color: #ffffff61;
+  color: #606060;
   }
   
   .assets-overview {

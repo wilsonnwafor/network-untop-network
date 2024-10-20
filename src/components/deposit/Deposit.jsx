@@ -23,9 +23,6 @@ converter()
 
   return (
     <>
-
-
-
       <main className="deposit-main">
         <Menu />
         <section className="deposit-sector">

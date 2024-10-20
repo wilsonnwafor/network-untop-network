@@ -1,6 +1,7 @@
 import React from "react";
-import "./menu.css";
 import "../general.css";
+import "./menu.css";
+
 import {
   FaAward,
   FaBeer,
@@ -16,6 +17,9 @@ import {
 import { FaGear } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Home from "../home/Home";
+import Asset from "../asset-comp/Asset";
+import Deposit from "../Deposit/Deposit";
+import Withdraw from "../withdraw/withdraw";
 
 import "@coinbase/onchainkit/styles.css";
 import {
@@ -31,7 +35,7 @@ export default function Menu() {
     <>
       {/* Sidebar Navigation */}
       <section className="navigation">
-        <Identity
+        {/* <Identity
           className="menu-wallet-id bg-blue "
           address="0x1AB850C0FFA3fe879B501fca9127f29d03464F46"
           schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
@@ -39,7 +43,7 @@ export default function Menu() {
           <Avatar className="menu-avatar bg-blue-80 text-center" />
           <Address className="menu-address bg-blue-80 text-center flex" />
           <Badge className="badge  w-4 " />
-        </Identity>
+        </Identity> */}
 
         <menu className="dash-menu">
           <ul className="dash-list">
@@ -50,9 +54,15 @@ export default function Menu() {
             </li>
 
             <li>
-              <Link to='/assets'>
+              <Link to='/Asset'>
                 Assets
               </Link>
+            </li>
+            <li>
+              <Link to="/Deposit">Deposit</Link>
+            </li>
+            <li>
+              <Link to="/Withdraw">Withraw</Link>
             </li>
             <li>
               Profile
