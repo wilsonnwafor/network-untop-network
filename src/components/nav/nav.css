@@ -37,6 +37,11 @@ body {
 
 .connect-wallet{
   height: 5vh; width: 20%;
+  transition: 500ms;
+}
+
+.connect-wallet:hover{
+  background-color: var(--tra-bg);
 }
 
 .walletD{
@@ -60,9 +65,9 @@ body {
   font-size: 15px;
 }
 
-.wallet-id .name .badge{
-  height: 1vh; width: 2%;
-  font-size: 12px;
+.wallet-id .avatar{
+  height: 3em; width: 3em;
+
 }
 
 .wallet-id .address{

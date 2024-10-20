@@ -30,7 +30,7 @@ body{
     margin: 5% 2%;
     /* display: block; */
     width: 35%;
-    padding: 2%;
+    padding: 1%;
     border-radius: 10px;
     outline: none;
     background-color: #ffffff3f;
@@ -41,4 +41,6 @@ body{
     transition: 500ms;
 }
 
-
+.home-btn button:hover{
+    background-color: #ffffff5f;
+}

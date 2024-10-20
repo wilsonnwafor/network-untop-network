@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./reg.css";
 import "../general.css";
 import Nav from "../nav/Nav";
 import Login from "./Login";
+import Home from "../home/Home";
 
 export default function Reg() {
   const [log_inp, setLogInp] = useState({
@@ -13,13 +14,34 @@ export default function Reg() {
     pin: "",
     comfirmPin: "",
   });
+
+  let navi = useNavigate()
+
+  let x = 123
+
+  const[err, setError] = useState("")
+
+  function AuthCheck(e) {
+    e.preventDefault();
+    if (log_inp.firstName == x && log_inp.lastMame == x && log_inp.phone == x && log_inp.pin == x && log_inp.comfirmPin == x) {
+      navi("/home")
+    }  else if (log_inp.firstName == "" && log_inp.lastMame == "" && log_inp.phone == "" && log_inp.pin == "" && log_inp.comfirmPin == "") {
+      setError("Please fill all inputs");
+    }  else  if (log_inp.firstName == "" || log_inp.lastMame == "" || log_inp.phone == "" || log_inp.pin == "" || log_inp.comfirmPin == "") {
+      setError("some inputs are empty");
+    }   else if (log_inp.firstName != x && log_inp.lastMame != x && log_inp.phone != x && log_inp.pin != x && log_inp.comfirmPin != x) {
+      setError("incorrect cridencials");
+    }
+  }
+
   return (
     <>
       <main className="reg-main">
-        {/* <Nav /> */}
         <div className="reg-flex">
           <form className="reg-form">
+       
             <div className="form-block">
+              {err ? <p className="err-text">{err}</p> : ""}   
               {/* <h2>{log_inp.phone} {log_inp.pin}{log_inp.firstName}{log_inp.lastMame} {log_inp.comfirmPin}</h2> */}
 
               <p className="input-p1">
@@ -81,7 +103,7 @@ export default function Reg() {
               </p>
 
               <p className="forget-p">FORGOT PASSWORD</p>
-              <button className="login-btn">SIGN UP</button>
+              <button className="login-btn" onClick={(e)=>{AuthCheck(e)}}>SIGN UP</button>
 
               <span className="or">or</span>
 

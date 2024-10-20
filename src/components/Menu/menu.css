@@ -6,24 +6,56 @@
     width:30%; 
     height: 90dvh;
     border-radius: 20px;
-    background-color: var(--primary);
-  border: 2px solid var(--secondary);
+    background-image: linear-gradient(160deg, var(--tra-bg), var(--lit-bg));
+  border: 5px solid var(--secondary);
   /* flex: 1; */
 }
 
   .dash-menu {
     width: 20%;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .menu-wallet-id{
+    margin: auto;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .menu-wallet-id .menu-avatar{
+    width: 4rem; height: 4rem;
+    margin-top: 20%;
+    border: 5px solid var(--tra-bg);
+    margin: auto;
+    cursor: pointer;
+    
+  }
+
+  .menu-wallet-id .menu-address{
+    font-size: 15px;
+    background-color: var(--tra-bg);
+    width: 8vw;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 10%;
   }
   
   .dash-list li{
-    display: flex;
     gap: 10px;
     list-style: none;
-    margin-top: 20%;
     color: #000;
     font-weight: 600;
-    margin-top: 50%;
+    margin-top: 10%;
+    background-color: #ffffff39;
+    padding-left: 50%;
+    width: 25vw; height: 5vh;
+    border-radius: 10px;
+    transition: 300ms;
+    cursor: pointer;
+  }
+
+  .dash-list li:hover{
+    background-color: #ffffff61;
   }
   
   .assets-overview {

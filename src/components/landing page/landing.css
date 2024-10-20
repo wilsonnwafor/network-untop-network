@@ -47,6 +47,8 @@ color: var(--text);
 
 .landing_logo{
     width: 50vw;
+    margin: auto;
+
 }
 
 .login_block{

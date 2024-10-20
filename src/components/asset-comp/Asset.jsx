@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Nav from "../nav/Nav";
-import "./dashboard.css";
+import "./asset.css";
 import "../general.css";
 import {
   FaAward,
@@ -18,6 +18,7 @@ import { FaGear, FaGears } from "react-icons/fa6";
 import Menu from "../Menu/Menu";
 import { useNavigate } from "react-router-dom";
 
+<<<<<<< HEAD:src/components/dashboard/Dashboard.jsx
 export default function Dashboard() {
   const navigate = useNavigate();
 
@@ -37,6 +38,9 @@ export default function Dashboard() {
     navigate('/deposit')
   }
 
+=======
+export default function Asset() {
+>>>>>>> 2f3d84fa1d302838e5fefe97c08fd4dada4501c8:src/components/asset-comp/Asset.jsx
   return (
     <main className="dash-main">
       <Nav />

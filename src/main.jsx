@@ -11,23 +11,3 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </OnchainProviders>
 );
-
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import App from "./App.jsx";
-// import OnchainProviders from "./OnchainkitProvider..jsx";
-// // import "./index.css";
-// // import "@coinbase/onchainkit/styles.css";
-// // import "@coinbase/onchainkit/styles.css";
-// // import OnchainProviders from "./OnchainkitProvider.jsx";
-
-// createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <OnchainProviders>
-//   <BrowserRouter>
-
-//    <App />
-//   </BrowserRouter>
-//     </OnchainProviders>
-//   </React.StrictMode>
-// );
