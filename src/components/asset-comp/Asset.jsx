@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../nav/Nav";
 import "./asset.css";
 import "../general.css";
@@ -16,8 +16,31 @@ import {
 } from "react-icons/fa"; // Font Awesome icon
 import { FaGear, FaGears } from "react-icons/fa6";
 import Menu from "../Menu/Menu";
+import { useNavigate } from "react-router-dom";
 
+<<<<<<< HEAD:src/components/dashboard/Dashboard.jsx
+export default function Dashboard() {
+  const navigate = useNavigate();
+
+  const [withdraw, setWithdrawal] = useState(false);
+  const [deposit, setDeposit] = useState(false);
+
+  const handleClick =()=>{
+    setWithdrawal(true);
+  };
+  const handleDeposit =()=>{
+    setDeposit(true);
+  };
+
+  if(withdraw){
+    navigate('/withdraw')
+  }else if(deposit){
+    navigate('/deposit')
+  }
+
+=======
 export default function Asset() {
+>>>>>>> 2f3d84fa1d302838e5fefe97c08fd4dada4501c8:src/components/asset-comp/Asset.jsx
   return (
     <main className="dash-main">
       <Nav />
@@ -30,13 +53,13 @@ export default function Asset() {
             <div className="transact-block">
               <h3>Deposit</h3>
               <input type="number" placeholder="Amount" />
-              <button>Continue</button>
+              <button onClick={handleDeposit}>Continue</button>
             </div>
 
             <div className="transact-block">
               <h3>Withdraw NGN</h3>
               <input type="number" placeholder="Amount" />
-              <button>Continue</button>
+              <button onClick={handleClick}>Continue</button>
             </div>
           </menu>
 
