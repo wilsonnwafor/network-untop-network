@@ -8,6 +8,7 @@ import Withdraw from "./components/withdraw/withdraw";
 import Approved_deposit from "./components/approval/approved_deposit";
 import Home from "./components/home/Home";
 import Asset from "./components/asset-comp/Asset";
+import Approved_withraw from "./components/approval/Approved_withraw";
 
 
 
@@ -19,12 +20,6 @@ function App() {
 
     {/* all components */}
 
-      {/* <Asset/> */}
-      {/* <Deposit/> */}
-      {/* <Approved_deposit/> */}
-      {/* <Withdraw/> */}
-      {/* <Home/> */}
-
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -33,6 +28,8 @@ function App() {
         <Route path="/Asset" element={<Asset />} />
         <Route path="/Deposit" element={<Deposit />} />
         <Route path="/Withdraw" element={<Withdraw />} />
+        <Route path="/Approved_deposit" element={<Approved_deposit />} />
+        <Route path="/Approved_withraw" element={<Approved_withraw />} />
       </Routes>
 
       {/* <Reg/> */}
