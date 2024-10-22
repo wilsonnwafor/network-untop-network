@@ -3,7 +3,7 @@ import Landing from "./components/landing page/Landing";
 import Login from "./components/auth/Login";
 // import Reg from "./components/auth/reg";
 import { Route, Routes } from "react-router-dom";
-import Deposit from "./components/Deposit/Deposit";
+import Deposit from "./components/deposit/Deposit";
 import Withdraw from "./components/withdraw/withdraw";
 import Approved_deposit from "./components/approval/approved_deposit";
 import Home from "./components/home/Home";
